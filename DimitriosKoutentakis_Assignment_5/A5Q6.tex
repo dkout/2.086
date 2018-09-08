@@ -1,0 +1,37 @@
+\documentclass[14pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{geometry} 
+\geometry{a4paper}
+\pgfplotsset{compat=1.12}
+
+
+\title{2.086 -A5Q6 }
+\author{Dimitrios Koutentakis}
+\date{}
+
+\begin{document}
+\maketitle
+%\vspace{1cm}
+%\vspace{1cm}
+
+\subsection*{Which approximation, finite-difference (based on interpolation) or best-fit, is most accurate?}
+%\vspace{1cm}
+
+
+The approximation that provides the most accuracy is the best-fit approximation. That is because the best-fit approximation is designed to pass as close as possible from all of our data-points. On the other hand, the quadratic interpolation is designed to only accomodate three points. We anticipate that in the plot of Height-vs-Time the quadratic approximation line passes perfectly through the three datapoints we used but it falls away from the points further from $t_0$, while the best-fit solution should pass very close to all of the points (not necessarily through any of them).Obviously the more datapoints our approximation accomodates, the less significant the error becomes. In the quadratic interpolation, the use of three datapoints means that the random error will have a bigger effect in the approximation than when using the best-fit solution (where we use five data points).\\
+
+\subsection*{Plot is attached below}
+
+\begin{figure}[b!]
+\centering 
+\newlength\figureheight
+ \newlength\figurewidth 
+\setlength\figureheight{6cm}
+ \setlength\figurewidth{12.5cm} 
+\input{mysphere.tikz} 
+\caption{The plot of Height-vs-Time}
+
+\end{figure}
+\end{document}
